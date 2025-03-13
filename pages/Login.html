@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Login</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#">Início</a>
-            <a href="#">Suporte</a>  
-            <button type="submit" class="btn">Login</button>
-
+            <a href= "inicio.html">Início</a>
+            <a href="suporte.html">Suporte</a>  
+        
         </nav>
     </header>
 
     <main>
+        <aside>
+            <form action="../ligacao.php" method="post">
+                <div class="box-cad">
+                    <h1>Login ADM</h1>
+                    <label for="Email" class="form-label">Email:</label>
+                    <input type="text" placeholder="Insira seu e-mail" class="form-control" id="email" aria-describedby="emailAdm">
+                </div>
+                <div class="box-cad">
+                    <label for="senha" class="form-label">Senha:</label>
+                    <input type="password" placeholder="Insira sua senha" class="form-control" id="senha"><br>
+                    <a href="#">Esqueci a senha</a>
+                    <a href="cadastro.html"> <button type="button" class="btn">Entrar</button></a>
+                
+                </div>
+            </form>
+        </aside>
     </main>
 
     <footer></footer>
+
 </body>
 </html>
