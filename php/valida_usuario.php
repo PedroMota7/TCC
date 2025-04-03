@@ -6,7 +6,7 @@ $cpf = $_POST['cpf'];
 $email = $_POST['email'];
 $data = date('Y-m-d');
 $TEL = $_POST['tel'];
-
+ 
 
 $abc = mysqli_connect('localhost', 'root', '', 'tcc');
 

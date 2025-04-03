@@ -12,16 +12,16 @@ HEADER('Location:Login.html');
 }
 
 
-$email = $_POST['email'];
+$email_adm = $_POST['email'];
 
-$sen = $_POST['senha'];
+$senha_adm = $_POST['senha'];
  
 $abc = mysqli_connect('localhost', 'root', NULL, 'tcc')
 or die ('Erro ao se conectar ao banco de dados');
 
     
 $consulta = "SELECT * FROM adm 
-WHERE email = '$email' AND senha = '$sen'";
+WHERE email = '$email' AND senha = '$senha_adm'";
 	
 
 
@@ -36,7 +36,7 @@ if(!mysqli_fetch_array($result))
 {
 	HEADER('Location:Login.html?log=erro2');
 }
-ELSE
+else
 {
 	 HEADER('Location:cadastro.html'); 
 }
