@@ -14,25 +14,33 @@
         
         </nav>
     </header>
-
     <main>
         <div class="container">
-            <form action="../ligacao.php" method="post">
+            <form action="../php/valida_login_adm.php" method="post">
                 <div class="box-cad">
                     <h1>Login ADM</h1>
                     <br>
                     <label for="Email" class="form-label"></label>
-                    <input type="text" placeholder="Insira seu e-mail" class="form-control" id="email" aria-describedby="emailAdm">
+                    <input type="text" placeholder="Insira seu e-mail" class="form-control" name="email" id="email" aria-describedby="emailAdm" required>
                 </div>
                 <div class="box-cad">
                     <label for="senha" class="form-label"></label>
-                    <input type="password" placeholder="Insira sua senha" class="form-control" id="senha"><br>
+                    <input type="password" placeholder="Insira sua senha" class="form-control"name="senha" id="senha" required><br>
                     <br>
                     <a href="#">Esqueci a senha</a>
-                    <a href="cadastro.html"> <button type="button" class="btn">Entrar</button></a>
-                </div>
+                    <input type="submit" value="Entrar">
             </form>
         </div>
+       <!-- <?php
+if(isset($_GET['log']) && $_GET['log'] == 'autenticado')
+{
+	echo "Usuario cadastrado com sucesso!";
+	sleep(2);
+	unset($_GET['log']);
+	//header("Refresh: 1; url=login.html");
+}
+
+?> -->
     </main>
 
     <footer></footer>
