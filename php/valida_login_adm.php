@@ -38,7 +38,7 @@ if(!mysqli_fetch_array($result))
 }
 else
 {
-	 HEADER('Location:cadastro.html'); 
+	 HEADER('Location:cadastro_user.html'); 
 }
 
 
