@@ -1,6 +1,5 @@
 <?php
 
-
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $email = $_POST['email'];

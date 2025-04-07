@@ -7,7 +7,11 @@ $cpf_adm = $_POST['cpf'];
 $cnpj_emp = $_POST['cnpj'];
 $senha_adm = $_POST['senha'];
 
-$senha_hash = password_hash($senha_adm, PASSWORD_BCRYPT);
+// $senha_hash = password_hash($senha_adm, PASSWORD_BCRYPT);
+if(isset($_POST["conf"])){
+    $string = $_POST["conf"];
+    echo md5($string);
+}
 
 $abc = mysqli_connect('localhost', 'root', NULL, 'tcc');
 
