@@ -8,7 +8,7 @@ $_SESSION['autenticado'] = 'NAO';
 
 if(!isset($_POST['name']) && $_POST['senha'])
 {
-HEADER('Location:Login.html');
+HEADER('Location:../pages/Login.html');
 }
 
 
@@ -29,16 +29,16 @@ $result = mysqli_query($abc, $consulta);
 
 if(!$result)
 {
-  HEADER('Location:Login.html?log=erro');
+  HEADER('Location:../pages/Login.html');
 }
 
 if(!mysqli_fetch_array($result))
 {
-	HEADER('Location:Login.html?log=erro2');
+	HEADER('Location:../pages/Login.html');
 }
 else
 {
-	 HEADER('Location:cadastro_user.html'); 
+	 HEADER('Location:../pages/cadastro_user.html'); 
 }
 
 
