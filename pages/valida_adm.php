@@ -1,11 +1,11 @@
 <?php
 
 
-$nome_adm = $_POST['nome'];
-$email_adm = $_POST['email'];
-$cpf_adm = $_POST['cpf'];
-$cnpj_emp = $_POST['cnpj'];
-$senha_adm = $_POST['senha'];
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$cpf = $_POST['cpf'];
+$cnpj = $_POST['cnpj'];
+$senha = $_POST['senha'];
 
 // $senha_hash = password_hash($senha_adm, PASSWORD_BCRYPT);
 if(isset($_POST["conf"])){
@@ -21,7 +21,7 @@ if (!$abc) {
 
 
 $sql = "INSERT INTO adm (ID, NOME, email, CPF, cnpj, senha)
-        VALUES (NULL, '$nome_adm', '$email_adm', '$cpf_adm', '$cnpj_emp', '$senha_adm')";
+        VALUES (NULL, '$nome', '$email', '$cpf', '$cnpj', '$senha')";
 
 $result2 = mysqli_query($abc, $sql);
 

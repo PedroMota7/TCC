@@ -8,20 +8,20 @@ $_SESSION['autenticado'] = 'NAO';
 
 if(!isset($_POST['name']) && $_POST['senha'])
 {
-HEADER('Location:../pages/Login.html');
+HEADER('Location:Login.html');
 }
 
 
-$email_adm = $_POST['email'];
+$email = $_POST['email'];
 
-$senha_adm = $_POST['senha'];
+$senha = $_POST['senha'];
  
 $abc = mysqli_connect('localhost', 'root', NULL, 'tcc')
 or die ('Erro ao se conectar ao banco de dados');
 
     
 $consulta = "SELECT * FROM adm 
-WHERE email = '$email' AND senha = '$senha_adm'";
+WHERE email = '$email' AND senha = '$senha'";
 	
 
 
@@ -29,16 +29,16 @@ $result = mysqli_query($abc, $consulta);
 
 if(!$result)
 {
-  HEADER('Location:../pages/Login.html');
+  HEADER('Location:Login.html');
 }
 
 if(!mysqli_fetch_array($result))
 {
-	HEADER('Location:../pages/Login.html');
+	HEADER('Location:Login.html');
 }
 else
 {
-	 HEADER('Location:../pages/cadastro_user.html'); 
+	 HEADER('Location:cadastro_user.html'); 
 }
 
 
