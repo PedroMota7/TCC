@@ -1,17 +1,16 @@
 <?php
 
 
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$cpf = $_POST['cpf'];
-$cnpj = $_POST['cnpj'];
-$senha = $_POST['senha'];
+$nome_adm = $_POST['nome'];
+$email_adm = $_POST['email'];
+$cpf_adm = $_POST['cpf'];
+$cnpj_emp = $_POST['cnpj'];
+$senha_adm = $_POST['senha'];
 
 // $senha_hash = password_hash($senha_adm, PASSWORD_BCRYPT);
-if(isset($_POST["conf"])){
-    $string = $_POST["conf"];
-    echo md5($string);
-}
+// if(isset($_POST["conf"])){
+    //$string = $_POST["conf"];
+    //echo md5($string);}
 
 $abc = mysqli_connect('localhost', 'root', NULL, 'tcc');
 
@@ -21,14 +20,17 @@ if (!$abc) {
 
 
 $sql = "INSERT INTO adm (ID, NOME, email, CPF, cnpj, senha)
-        VALUES (NULL, '$nome', '$email', '$cpf', '$cnpj', '$senha')";
+        VALUES (NULL, '$nome_adm', '$email_adm', '$cpf_adm', '$cnpj_emp', '$senha_adm')";
 
 $result2 = mysqli_query($abc, $sql);
 
 if ($result2) {
-    echo "Cadastro realizado com sucesso!";
+  
+    sleep(2);
+	header('location:../pages/Login.html');
+}
     
-} else {
+ else {
     echo "Erro ao cadastrar: " . mysqli_error($abc);
 }
 
